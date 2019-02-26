@@ -10,10 +10,10 @@
     <header class="page-header">
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a href="#" class="site-list__link">Главная</a></li>
-          <li class="site-list__item"><a href="#" class="site-list__link">Фото и видео</a></li>
-          <li class="site-list__item"><a href="#" class="site-list__link">Форма отзыва</a></li>
-          <li class="site-list__item"><a href="#" class="site-list__link">HTML Academy</a></li>
+          <li><a class="site-list__link" href="#">Главная</a></li>
+          <li><a class="site-list__link" href="#">Фото и видео</a></li>
+          <li><a class="site-list__link" href="#">Форма отзыва</a></li>
+          <li><a class="site-list__link" href="#">HTML Academy</a></li>
         </ul>
         <button class="main-nav__close">Закрыть меню</button>
         <button class="main-nav__toggle">Открыть меню</button>
@@ -28,95 +28,95 @@
         <h2 class="feedback__header">Оставьте свой отзыв</h2>
 
         <p class="feedback__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-        <form method="POST" action="https://echo.htmlacademy.ru" class="page-main__form main-form">
-          <fieldset class="main-form__fieldset name-fieldset">
+        <form method="POST" action="https://echo.htmlacademy.ru" class="feedback__form">
+          <fieldset class="name-fieldset">
             <legend>Представьтесь:</legend>
-            <ul class="name-fieldset__list name-list">
-              <li class="name-list__item">
-                <label class="name-list__label" for="name">Имя<sup>*</sup></label>
-                <p><input type="text" name="name" id="name" placeholder="Петр"></p>
+            <ul class="name-fieldset__list">
+              <li class="name-fieldset__item">
+                <label class="name-fieldset__label" for="name">Имя<sup>*</sup></label>
+                <input type="text" name="name" id="name" placeholder="Петр">
               </li>
-              <li class="name-list__item">
-                <label class="name-list__label" for="surname">Фамилия<sup>*</sup></label>
-                <p><input type="text" name="surname" id="surname" placeholder="Петров"></p>
+              <li class="name-fieldset__item">
+                <label class="name-fieldset__label" for="surname">Фамилия<sup>*</sup></label>
+                <input type="text" name="surname" id="surname" placeholder="Петров">
               </li>
-              <li class="name-list__item">
-                <label class="name-list__label" for="patronymic">Отчество</label>
-                <p><input type="text" name="patronymic" id="patronymic" placeholder="Александрович"></p>
+              <li class="name-fieldset__item">
+                <label class="name-fieldset__label" for="patronymic">Отчество</label>
+                <input type="text" name="patronymic" id="patronymic" placeholder="Александрович">
               </li>
           </ul>
           </fieldset>
 
-          <fieldset class="main-form__fieldset contacts-fieldset">
+          <fieldset class="contacts-fieldset">
             <legend>Контактная информация:</legend>
-            <ul class="contats__fieldset contacts">
-              <li class="contacts__item">
-                <label for="phone" class="contacts__label">Контактный телефон<sup>*</sup></label>
-                <p><input type="text" name="phone" id="phone" placeholder="Введите телефон"></p>
+            <ul class="contacts-fieldset__list">
+              <li class="contacts-fieldset__item">
+                <label for="phone" class="contacts-fieldset__label">Контактный телефон<sup>*</sup></label>
+                <input type="text" name="phone" id="phone" placeholder="Введите телефон">
               </li>
-              <li class="contacts__item">
-                <label for="email" class="contacts__label">Электронная почта<sup>*</sup></label>
-                <p><input type="text" name="email" id="email" placeholder="Введите e-mail"></p>
+              <li class="contacts-fieldset__item">
+                <label for="email" class="contacts-fieldset__label">Электронная почта<sup>*</sup></label>
+                <input type="text" name="email" id="email" placeholder="Введите e-mail">
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="main-form__fieldset impression-fieldset">
+          <fieldset class="impression-fieldset">
             <legend>Ваше общее впечатление:</legend>
-            <ul class="impression-fieldset__list impression-list">
-              <li class="impression-list__item">
+            <ul class="impression-fieldset__list">
+              <li class="impression-fieldset__item">
                 <input type="radio" name="impression" id="positive" class="visually-hidden" checked>
-                <label class="impression-list__label" for="positive">Скорее положительное</label>
+                <label class="impression-fieldset__label" for="positive">Скорее положительное</label>
               </li>
-              <li class="impression-list__item">
+              <li class="impression-fieldset__item">
                 <input type="radio" name="impression" id="negative" class="visually-hidden">
-                <label class="impression-list__label" for="negative">Скорее отрицательное</label>
+                <label class="impression-fieldset__label" for="negative">Скорее отрицательное</label>
               </li>
-              <li class="impression-list__item">
+              <li class="impression-fieldset__item">
                 <input type="radio" name="impression" id="neutral" class="visually-hidden">
-                <label class="impression-list__label" for="neutral">Затрудняюсь ответить</label>
+                <label class="impression-fieldset__label" for="neutral">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="main-form__fieldset sight-fieldset">
+          <fieldset class="sight-fieldset">
             <legend>Посещенные достопримечательности</legend>
-              <ul class="sight-fieldset__list sight-list">
-                <li class="sight-list__item">
+              <ul class="sight-fieldset__list">
+                <li class="sight-fieldset__item">
                   <input type="checkbox" name="devil-bridge" id="devil-bridge" class="visually-hidden" checked>
                   <label for="devil-bridge">Мост дьявола</label>
                 </li>
-                <li class="sight-list__item">
+                <li class="sight-fieldset__item">
                   <input type="checkbox" name="mountain-bell" id="mountain-bell" class="visually-hidden" checked>
                   <label for="mountain-bell">Гора-колокол</label>
                 </li>
-                <li class="sight-list__item">
+                <li class="sight-fieldset__item">
                   <input type="checkbox" name="slide-park" id="slide-park" class="visually-hidden" checked>
                   <label for="slide-park">Слайд-парк</label>
                 </li>
-                <li class="sight-list__item">
+                <li class="sight-fieldset__item">
                   <input type="checkbox" name="red-rocks" id="red-rocks" class="visually-hidden">
                   <label for="red-rocks">Красные скалы</label>
                 </li>
               </ul>
           </fieldset>
 
-          <fieldset class="main-form__fieldset emotions-description">
-            <label class="emotions-description__label" for="emotions-description">Опишите свои эмоции:</label>
-            <textarea name="emotions" id="emotions-description" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+          <fieldset class="emotions-fieldset">
+            <label for="emotions">Опишите свои эмоции:</label>
+            <textarea name="emotions" id="emotions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
-          <button class="main-form__button" type="submit">Отправить отзыв</button>
+          <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
         </form>
       </section>
     </main>
 
     <footer class="page-footer">
       <p class="page-footer__hashtag">#VISITSEDONA</p>
-      <ul class="page-footer__social social-list">
-        <li class="social-list__item social-list__item--twitter"><a href="" class="social-list__link">Твиттер</a></li>
-        <li class="social-list__item social-list__item--facebook"><a href="" class="social-list__link">Фейсбук</a></li>
-        <li class="social-list__item social-list__item--youtube"><a href="" class="social-list__link">Ютуб</a></li>
+      <ul class="page-footer__social social">
+        <li><a href="#" class="social__link social__link--twitter">Твиттер</a></li>
+        <li><a href="#" class="social__link social__link--facebook">Фейсбук</a></li>
+        <li><a href="#" class="social__link social__link--youtube">Ютуб</a></li>
       </ul>
       <p class="page-footer__copyright">Разработано
         <a href="#">Сайт академии</a>
