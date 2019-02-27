@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <title>Sedona</title>
   </head>
   <body>
     <header class="page-header">
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
-          <li><a class="site-list__link" href="#">Главная</a></li>
-          <li><a class="site-list__link" href="#">Фото и видео</a></li>
-          <li><a class="site-list__link" href="#">Форма отзыва</a></li>
+          <li><a class="site-list__link" href="index.html">Главная</a></li>
+          <li><a class="site-list__link" href="photo.html">Фото и видео</a></li>
+          <li><a class="site-list__link" href="form.html">Форма отзыва</a></li>
           <li><a class="site-list__link" href="#">HTML Academy</a></li>
         </ul>
         <button class="main-nav__close">Закрыть меню</button>
@@ -24,6 +25,10 @@
     <main class="page-main">
       <h1 class="visually-hidden">Курортный городок «Седона»</h1>
 
+      <div class="sedona-image-wrapper">
+        <!-- sedona-text.svg -->
+      </div>
+
       <section class="promo">
         <h2 class="visually-hidden">Описание курорта</h2>
 
@@ -33,7 +38,7 @@
           <p class="intro-block__intro">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
         <ul class="promo__list">
-          <li class="promo__item">
+          <li class="promo__item promo__item--detailed">
             <h3 class="promo__header">Настоящий городок</h3>
             <span class="promo__number">— №1 —</span>
             <p class="promo__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
@@ -53,7 +58,7 @@
               </li>
             </ul>
           </li>
-          <li class="promo__item">
+          <li class="promo__item promo__item--detailed">
             <h3 class="promo__header">Там есть мост дьявола</h3>
             <span class="promo__number">– №2 –</span>
             <p class="promo__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
@@ -86,9 +91,9 @@
     <footer class="page-footer">
       <p class="page-footer__hashtag">#VISITSEDONA</p>
       <ul class="page-footer__social social">
-        <li><a href="#" class="social__link social__link--twitter">Твиттер</a></li>
-        <li><a href="#" class="social__link social__link--facebook">Фейсбук</a></li>
-        <li><a href="#" class="social__link social__link--youtube">Ютуб</a></li>
+        <li class="social__item social__item--twitter"><a href="#">Твиттер</a></li>
+        <li class="social__item social__item--facebook"><a href="#">Фейсбук</a></li>
+        <li class="social__item social__item--youtube"><a href="#">Ютуб</a></li>
       </ul>
       <p class="page-footer__copyright">Разработано
         <a href="#">Сайт академии</a>
