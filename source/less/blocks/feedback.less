@@ -10,7 +10,7 @@
 .feedback__intro {
 .reset-indents();
 
-font-size: 14px;
+font-size: @intro-font-size;
 line-height: 24px;
 }
 
@@ -19,11 +19,6 @@ line-height: 24px;
 }
 
 .feedback-form__button {
-  font-style: 21px;
-  line-height: 26px;
-  font-weight: 800;
-
-  color: #fff;
-  background-color: @bg-lightblue;
+  .button-props();
   text-transform: uppercase;
 }
