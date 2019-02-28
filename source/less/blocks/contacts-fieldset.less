@@ -1,0 +1,20 @@
+.contacts-fieldset {
+  border: none;
+}
+
+.contacts-fieldset__list {
+  .reset-list();
+}
+
+.contacts-fieldset__label {
+  font-size: @label-font-size;
+  line-height: 26px;
+}
+
+.contacts-fieldset__input {
+  background-color: @bg-input-text;
+
+  &::placeholder {
+   .frequent-header();
+  }
+}

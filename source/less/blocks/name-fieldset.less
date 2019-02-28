@@ -1,0 +1,21 @@
+.name-fieldset {
+  border: none;
+}
+
+.name-fieldset__list {
+  .reset-list();
+}
+
+.name-fieldset__label {
+  font-size: @label-font-size;
+  line-height: 26px;
+}
+
+.name-fieldset__input {
+  background-color: @bg-input-text;
+
+  &::placeholder {
+    .frequent-header();
+  }
+}
+

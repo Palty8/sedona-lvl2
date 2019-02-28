@@ -1,0 +1,25 @@
+.promo {
+  outline: 2px dotted red;
+}
+
+.promo__list {
+  .reset-list();
+
+  background-color: @bg-promo-list;
+}
+
+.promo__header {
+  .reset-indents();
+  .frequent-header();
+}
+
+.promo__item--detailed {
+  background-color: @bg-promo-item-detailed;
+  color: @promo-item-detailed-font-color;
+}
+
+.promo__item--detailed .promo__header {
+  color: @promo-item-detailed-font-color;
+}
+
+
