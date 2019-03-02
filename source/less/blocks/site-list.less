@@ -1,7 +1,5 @@
 .site-list {
   .reset-list();
-
-  background-color: @bg-site-list;
 }
 
 .site-list__link {
@@ -9,4 +7,17 @@
   line-height: 40px;
   font-weight: 800;
   color: @site-list-font-color;
+}
+
+@media (min-width: 768px) {
+  .site-list {
+    display: flex;
+  }
+
+  .site-list__link {
+    font-size: @site-list-font-size-tablet;
+    line-height: 26px;
+    font-weight: 800;
+    color: @site-list-font-color-tablet;
+  }
 }

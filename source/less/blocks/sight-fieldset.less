@@ -10,3 +10,25 @@
   .frequent-header();
   text-transform: initial;
 }
+
+@media (min-width: @tablet-width) {
+  .sight-fieldset__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 648px;
+  }
+
+  .sight-fieldset__item {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sight-fieldset__list {
+    width: 960px;
+  }
+
+  .sight-fieldset__item {
+    width: 205px;
+  }
+}

@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Form</title>
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li><a class="site-list__link" href="index.html">Главная</a></li>
-          <li><a class="site-list__link" href="photo.html">Фото и видео</a></li>
-          <li><a class="site-list__link" href="form.html">Форма отзыва</a></li>
-          <li><a class="site-list__link" href="#">HTML Academy</a></li>
-        </ul>
-        <button class="main-nav__close">Закрыть меню</button>
-        <button class="main-nav__toggle">Открыть меню</button>
-      </nav>
+        <nav class="main-nav">
+          <ul class="main-nav__list site-list">
+            <li><a class="site-list__link" href="index.html">Главная</a></li>
+            <li><a class="site-list__link" href="photo.html">Фото и видео</a></li>
+            <li><a class="site-list__link" href="form.html">Форма отзыва</a></li>
+            <li><a class="site-list__link" href="#">HTML Academy</a></li>
+          </ul>
+          <button class="main-nav__close">Закрыть меню</button>
+          <button class="main-nav__toggle">Открыть меню</button>
+        </nav>
       <!-- logo-svg -->
     </header>
     <main class="page-main">
@@ -33,74 +34,76 @@
 
         <p class="feedback__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form method="POST" action="https://echo.htmlacademy.ru" class="feedback__form">
-          <fieldset class="name-fieldset">
-            <legend>Представьтесь:</legend>
-            <ul class="name-fieldset__list">
-              <li class="name-fieldset__item">
-                <label class="name-fieldset__label" for="name">Имя:<sup>*</sup></label>
-                <input type="text" name="name" id="name" placeholder="Петр" class="name-fieldset__input">
-              </li>
-              <li class="name-fieldset__item">
-                <label class="name-fieldset__label" for="surname">Фамилия:<sup>*</sup></label>
-                <input type="text" name="surname" id="surname" placeholder="Иванов" class="name-fieldset__input">
-              </li>
-              <li class="name-fieldset__item">
-                <label class="name-fieldset__label" for="patronymic">Отчество:</label>
-                <input type="text" name="patronymic" id="patronymic" placeholder="Александрович" class="name-fieldset__input">
-              </li>
-          </ul>
-          </fieldset>
+          <div class="form-wrapper">
+            <fieldset class="impression-fieldset">
+              <legend>Ваше общее впечатление:</legend>
+                <ul class="impression-fieldset__list">
+                  <li class="impression-fieldset__item">
+                    <input type="radio" name="impression" id="positive" value="positive" checked>
+                    <label class="impression-fieldset__label" for="positive">Скорее положительное</label>
+                  </li>
+                  <li class="impression-fieldset__item">
+                    <input type="radio" name="impression" id="negative" value="negative">
+                    <label class="impression-fieldset__label" for="negative">Скорее отрицательное</label>
+                  </li>
+                  <li class="impression-fieldset__item">
+                    <input type="radio" name="impression" id="neutral" value="neutral">
+                    <label class="impression-fieldset__label" for="neutral">Затрудняюсь ответить</label>
+                  </li>
+                </ul>
+            </fieldset>
 
-          <fieldset class="contacts-fieldset">
-            <legend>Контактная информация:</legend>
-            <ul class="contacts-fieldset__list">
-              <li class="contacts-fieldset__item">
-                <label for="phone" class="contacts-fieldset__label">Контактный телефон<sup>*</sup></label>
-                <input type="text" name="phone" id="phone" placeholder="Введите телефон" class="contacts-fieldset__input">
-              </li>
-              <li class="contacts-fieldset__item">
-                <label for="email" class="contacts-fieldset__label">Электронная почта<sup>*</sup></label>
-                <input type="text" name="email" id="email" placeholder="Введите e-mail" class="contacts-fieldset__input">
-              </li>
-            </ul>
-          </fieldset>
+            <fieldset class="name-fieldset">
+              <legend>Представьтесь:</legend>
+              <ul class="name-fieldset__list">
+                <li class="name-fieldset__item">
+                  <label class="name-fieldset__label" for="name">Имя:<sup>*</sup></label>
+                  <input type="text" name="name" id="name" placeholder="Петр" class="name-fieldset__input">
+                </li>
+                <li class="name-fieldset__item">
+                  <label class="name-fieldset__label" for="surname">Фамилия:<sup>*</sup></label>
+                  <input type="text" name="surname" id="surname" placeholder="Иванов" class="name-fieldset__input">
+                </li>
+                <li class="name-fieldset__item">
+                  <label class="name-fieldset__label" for="patronymic">Отчество:</label>
+                  <input type="text" name="patronymic" id="patronymic" placeholder="Александрович" class="name-fieldset__input">
+                </li>
+              </ul>
+            </fieldset>
 
-          <fieldset class="impression-fieldset">
-            <legend>Ваше общее впечатление:</legend>
-            <ul class="impression-fieldset__list">
-              <li class="impression-fieldset__item">
-                <input type="radio" name="impression" id="positive" value="positive" checked>
-                <label class="impression-fieldset__label" for="positive">Скорее положительное</label>
-              </li>
-              <li class="impression-fieldset__item">
-                <input type="radio" name="impression" id="negative" value="negative">
-                <label class="impression-fieldset__label" for="negative">Скорее отрицательное</label>
-              </li>
-              <li class="impression-fieldset__item">
-                <input type="radio" name="impression" id="neutral" value="neutral">
-                <label class="impression-fieldset__label" for="neutral">Затрудняюсь ответить</label>
-              </li>
-            </ul>
-          </fieldset>
+            <fieldset class="contacts-fieldset">
+              <legend>Контактная информация:</legend>
+              <ul class="contacts-fieldset__list">
+                <li class="contacts-fieldset__item">
+                  <label for="phone" class="contacts-fieldset__label">Контактный телефон<sup>*</sup></label>
+                  <input type="text" name="phone" id="phone" placeholder="Введите телефон" class="contacts-fieldset__input">
+                </li>
+                <li class="contacts-fieldset__item">
+                  <label for="email" class="contacts-fieldset__label">Электронная почта<sup>*</sup></label>
+                  <input type="text" name="email" id="email" placeholder="Введите e-mail" class="contacts-fieldset__input">
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
           <fieldset class="sight-fieldset">
             <legend>Посещенные достопримечательности</legend>
               <ul class="sight-fieldset__list">
                 <li class="sight-fieldset__item">
                   <input type="checkbox" name="devil-bridge" id="devil-bridge" checked>
-                  <label class="sight-fieldset__label for="devil-bridge">Мост дьявола</label>
+                  <label class="sight-fieldset__label" for="devil-bridge">Мост дьявола</label>
                 </li>
                 <li class="sight-fieldset__item">
                   <input type="checkbox" name="mountain-bell" id="mountain-bell" checked>
-                  <label class="sight-fieldset__label for="mountain-bell">Гора-колокол</label>
+                  <label class="sight-fieldset__label" for="mountain-bell">Гора-колокол</label>
                 </li>
                 <li class="sight-fieldset__item">
                   <input type="checkbox" name="slide-park" id="slide-park" checked>
-                  <label class="sight-fieldset__label for="slide-park">Слайд-парк</label>
+                  <label class="sight-fieldset__label" for="slide-park">Слайд-парк</label>
                 </li>
                 <li class="sight-fieldset__item">
                   <input type="checkbox" name="red-rocks" id="red-rocks">
-                  <label class="sight-fieldset__label for="red-rocks">Красные скалы</label>
+                  <label class="sight-fieldset__label" for="red-rocks">Красные скалы</label>
                 </li>
               </ul>
           </fieldset>

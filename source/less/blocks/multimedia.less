@@ -33,3 +33,37 @@
   font-weight: 800;
   color: @multimedia-likes-font-color;
 }
+
+.multimedia__list {
+  background-color: gray;
+}
+
+.multimedia-item--big {
+  background-color: lightblue;
+}
+
+.multimedia__item {
+  outline: 3px dotted orange;
+}
+
+@media (min-width: @tablet-width) {
+  .multimedia__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .multimedia__item--more--multimedia {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .multimedia__item--more--multimedia .multimedia__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .multimedia__item--more--multimedia .multimedia__item {
+    width: 33%;
+  }
+}
