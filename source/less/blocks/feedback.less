@@ -14,11 +14,77 @@ font-size: @intro-font-size;
 line-height: 24px;
 }
 
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+}
+
 .feedback__form legend {
   .frequent-header();
 }
 
 .feedback-form__button {
   .button-props();
+  width: 280px;
   text-transform: uppercase;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.impression-fieldset {
+  order: 2;
+}
+
+@media (min-width: @tablet-width) {
+  .impression-fieldset {
+    order: 0;
+  }
+
+  .form-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .impression-fieldset {
+    width: 324px;
+  }
+
+  .name-fieldset {
+    width: 324px;
+  }
+
+  .contacts-fieldset {
+    width: 648px;
+  }
+
+  .feedback-form__button {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .impression-fieldset {
+    width: 480px;
+  }
+
+  .name-fieldset {
+    width: 480px;
+  }
+
+  .contacts-fieldset {
+    display: flex;
+    width: 960px;
+  }
+
+  .feedback-form__button {
+    width: 480px;
+  }
 }

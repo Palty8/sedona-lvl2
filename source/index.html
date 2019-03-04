@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Sedona</title>
   </head>
   <body>
+    <div class="container">
     <header class="page-header">
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
-          <li><a class="site-list__link" href="index.html">Главная</a></li>
+          <li><a class="site-list__link">Главная</a></li>
           <li><a class="site-list__link" href="photo.html">Фото и видео</a></li>
           <li><a class="site-list__link" href="form.html">Форма отзыва</a></li>
           <li><a class="site-list__link" href="#">HTML Academy</a></li>
@@ -64,21 +66,23 @@
             <p class="promo__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             <!-- canyon-img -->
           </li>
-          <li class="promo__item">
-            <h3 class="promo__header">Небольшая площадь</h3>
-            <span class="promo__number">— №3 —</span>
-            <p class="promo__text">Все интересные места находятся очень близко</p>
-          </li>
-          <li class="promo__item">
-            <h3 class="promo__header">Красивая дорога</h3>
-            <span class="promo__number">— №4 —</span>
-            <p class="promo__text">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
-          </li>
-          <li class="promo__item">
-            <h3 class="promo__header">Мало туристов</h3>
-            <span class="promo__number">— №5 —</span>
-            <p class="promo__text">Большинство едет в гранд каньон и толпится там</p>
-          </li>
+          <li class="promo__item--more-items">
+            <div class="promo__item--">
+              <h3 class="promo__header">Небольшая площадь</h3>
+              <span class="promo__number">— №3 —</span>
+              <p class="promo__text">Все интересные места находятся очень близко</p>
+            </div>
+            <div class="promo__item">
+              <h3 class="promo__header">Красивая дорога</h3>
+              <span class="promo__number">— №4 —</span>
+              <p class="promo__text">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
+            </div>
+            <div class="promo__item">
+              <h3 class="promo__header">Мало туристов</h3>
+              <span class="promo__number">— №5 —</span>
+              <p class="promo__text">Большинство едет в гранд каньон и толпится там</p>
+            </div>
+            </li>
         </ul>
         <div class="search-block">
           <b class="search-block__intro">Заинтересовались?</b>
@@ -99,5 +103,6 @@
         <a href="#">Сайт академии</a>
       </p>
     </footer>
+  </div>
   </body>
 </html>

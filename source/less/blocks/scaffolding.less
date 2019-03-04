@@ -16,7 +16,7 @@
 }
 
 body {
-  max-width: 320px;
+  min-width: 320px;
   .reset-indents();
 
   font-family: "PTSans", Arial, sans-serif;
@@ -55,4 +55,23 @@ img {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 672px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1060px;
+    padding: 0 70px;
+  }
 }
