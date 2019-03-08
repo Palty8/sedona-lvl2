@@ -1,5 +1,11 @@
 .advantages {
   .reset-list();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 40px;
 
   background-color: @bg-body;
   color: @advantages-font-color;
@@ -8,14 +14,105 @@
 .advantages__header {
   .reset-indents();
   .frequent-header();
+  padding-bottom: 20px;
 }
 
 .advantages__text {
   .reset-indents();
+  width: 205px;
+  padding-bottom: 30px;
+}
+
+.advantages__item {
+  position: relative;
+}
+
+.advantages__item::before {
+  content: "";
+
+  position: absolute;
+  top: -10px;
+  left: -50px;
+
+  width: 39px;
+  height: 37px;
+
+  background-size: cover;
+}
+
+.advantages__item--house::before {
+  background-image: url('../img/icon-house.svg');
+}
+
+.advantages__item--gift::before {
+  width: 32px;
+  height: 38px;
+  background-image: url('../img/icon-gift.svg');
+}
+
+.advantages__item--burger::before {
+  width: 40px;
+  height: 35px;
+  background-image: url('../img/icon-burger.svg');
 }
 
 @media (min-width: @tablet-width) {
   .advantages {
     display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .advantages__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 33.3%;
+    padding-top: 160px;
+    padding-bottom: 60px;
+  }
+
+  .advantages__header {
+    font-size: 21px;
+  }
+
+  .advantages__text {
+    width: 165px;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .advantages__item--gift {
+    order: 2;
+  }
+
+  .advantages__item::before {
+    content: "";
+
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 75px;
+    height: 72px;
+
+    background-size: cover;
+  }
+
+  .advantages__item{
+    &--gift::before {
+    width: 64px;
+    height: 75px;
+    background-image: url('../img/icon-gift.svg');
+    }
+    &--burger::before {
+      width: 77px;
+      height: 68px;
+      background-image: url('../img/icon-burger.svg');
+    }
   }
 }

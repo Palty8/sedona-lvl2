@@ -1,7 +1,3 @@
-.promo {
-  outline: 2px dotted red;
-}
-
 .promo__list {
   .reset-list();
 
@@ -11,6 +7,24 @@
 .promo__header {
   .reset-indents();
   .frequent-header();
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.promo__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 40px;
+}
+
+.promo__text {
+ .reset-indents();
+  width: 255px;
+  padding-bottom: 30px;
+
+  text-align: center;
 }
 
 .promo__item--detailed {
@@ -18,13 +32,112 @@
   color: @promo-item-detailed-font-color;
 }
 
+.promo-detailed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo__number {
+  padding-bottom: 10px;
+}
+
+.promo__item--detailed:first-child {
+  padding-top: 55px;
+  background-image: url(../img/bg-triangle.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 .promo__item--detailed .promo__header {
   color: @promo-item-detailed-font-color;
+}
+
+.promo__item--detailed img {
+  width: 100%;
+  height: auto;
+}
+
+.promo__item--more-items .promo__item{
+  position: relative;
+
+  padding-bottom: 40px;
+}
+
+.promo__item--more-items .promo__item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 87.5%;
+  height: 1px;
+
+  background-color: #282828;
 }
 
 @media (min-width: @tablet-width) {
   .promo__item--more-items {
     display: flex;
+  }
+
+  .promo__header {
+    width: 160px;
+    font-size: 21px;
+  }
+
+  .promo__text {
+    width: 170px;
+  }
+
+  .promo__number {
+    padding-bottom: 30px;
+  }
+
+  .promo__item--detailed:first-child {
+    padding-top: 0;
+    background-image: none;
+  }
+
+  .promo__item--detailed {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 0;
+  }
+
+  .promo-detailed-container {
+    width: 34%;
+  }
+
+  .promo__item--detailed img {
+    width: 66%;
+  }
+
+  .promo__item--more-items .promo__item:not(:last-child)::after {
+    display: none;
+  }
+
+  .promo__item--more-items .promo__item {
+    width: 33.3%;
+  }
+
+  .promo__bridge-img {
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo__text {
+    width: 270px;
+  }
+
+  .promo__item--more-items .promo__item{
+    position: relative;
+
+    padding-bottom: 60px;
   }
 }
 

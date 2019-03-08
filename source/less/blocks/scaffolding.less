@@ -15,6 +15,14 @@
   font-style: normal;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   min-width: 320px;
   .reset-indents();
@@ -57,21 +65,21 @@ img {
   overflow: hidden;
 }
 
-.container {
-  padding: 0 20px;
+@media (min-width: @mobile-container-width) {
+  .page-container {
+    padding: 0 20px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .container {
-    width: 672px;
+  .page-container {
+    max-width: 960px;
     margin: 0 auto;
-    padding: 0 48px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .container {
-    width: 1060px;
-    padding: 0 70px;
+  .page-container {
+    max-width: 1200px;
   }
 }
