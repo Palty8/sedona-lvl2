@@ -1,16 +1,28 @@
 .emotions-fieldset {
+  padding-bottom: 50px;
+
   border: none;
 }
 
 .emotions-fieldset label {
   .frequent-header();
+  display: block;
+
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  text-align: center;
 }
 
 .emotions-fieldset textarea {
+  width: 100%;
   background-color: @bg-input-text;
 
   &::placeholder {
     .frequent-header();
+    padding-left: 20px;
+    padding-top: 20px;
   }
 }
 
@@ -20,7 +32,11 @@
     flex-direction: column;
   }
 
-  .emotions-fieldset textarea {
-    width: 100%;
+  .emotions-fieldset label {
+    width: 350px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+    background-color: #fff;
   }
 }

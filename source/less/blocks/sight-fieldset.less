@@ -6,29 +6,83 @@
   .reset-list();
 }
 
+.sight-fieldset__item {
+  width: 100%;
+  padding-bottom: 50px;
+
+  display: flex;
+
+}
+
 .sight-fieldset__label {
   .frequent-header();
+  position: relative;
+
+  padding-left: 60px;
+
   text-transform: initial;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: -7px;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: #e6e6e6;
+    cursor: pointer;
+  }
+}
+
+.sight-fieldset__item input:checked~.sight-fieldset__label::before {
+  background-image: url(../img/icon-tick.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sight-fieldset legend {
+  width: 250px;
 }
 
 @media (min-width: @tablet-width) {
   .sight-fieldset__list {
     display: flex;
     flex-wrap: wrap;
-    width: 648px;
+
+    width: 500px;
+    margin: 0 auto;
   }
 
   .sight-fieldset__item {
-    width: 324px;
+    width: 240px;
+    padding-left: 55px;
+  }
+
+  .sight-fieldset__label {
+    width: 200px;
+  }
+
+  .sight-fieldset legend {
+    width: 350px;
+    padding-bottom: 60px;
+
+    background-color: #fff;
   }
 }
 
 @media (min-width: @desktop-width) {
   .sight-fieldset__list {
-    width: 960px;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .sight-fieldset__item {
-    width: 205px;
+    width: 24%;
+    padding-left: 0;
   }
 }

@@ -15,6 +15,10 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+.site-list__item:last-child .site-list__link {
+  border-bottom:  none;
+}
+
 .site-list__link[href] {
   &:hover {
     background-color: @bg-site-list__link-hover;
@@ -104,8 +108,7 @@
   }
 
   .site-list {
-    width: 1200px;
-    padding-left: 90px;
+    width: 100%;
   }
 
   .site-list__item--main {

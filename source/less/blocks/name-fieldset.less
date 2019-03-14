@@ -6,12 +6,26 @@
   .reset-list();
 }
 
+.name-fieldset__item {
+  padding-bottom: 20px;
+}
+
 .name-fieldset__label {
   font-size: @label-font-size;
   line-height: 26px;
+  padding-right: 15px;
+}
+
+.name-fieldset__label sup {
+  top: -2px;
 }
 
 .name-fieldset__input {
+  width: 58%;
+  height: 58px;
+  padding-left: 20px;
+
+  border: none;
   background-color: @bg-input-text;
 
   &::placeholder {
@@ -19,3 +33,32 @@
   }
 }
 
+.name-fieldset__item:first-child .name-fieldset__input {
+  width: 71%;
+}
+
+@media (min-width: @tablet-width) {
+  .name-fieldset {
+    width: 49%;
+    margin-left: auto;
+  }
+
+  .name-fieldset legend {
+    text-align: left;
+    padding-bottom: 50px;
+  }
+
+  .name-fieldset__input {
+    width: 71%;
+  }
+
+  .name-fieldset__item:first-child .name-fieldset__input {
+    width: 83%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .name-fieldset__item:first-child .name-fieldset__input {
+    width: 79%;
+  }
+}

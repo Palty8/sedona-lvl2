@@ -1,11 +1,5 @@
-.multimedia__header {
-.frequent-header()
-}
-
-.multimedia__intro {
-  .reset-indents();
-  font-size: @intro-font-size;
-  line-height: 24px;
+.multimedia {
+  padding-bottom: 100px;
 }
 
 .multimedia__list {
@@ -15,34 +9,76 @@
 }
 
 .multimedia__photo-header {
+  .reset-indents();
   font-weight: 800;
   color: @multimedia-photo-header-font-color;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 .multimedia__author {
   .reset-indents();
-
+  padding-top: 5px;
+  padding-bottom: 15px;
+  padding-left: 20px;
   text-transform: initial;
 }
 
 .multimedia__likes {
+  position: relative;
+
+  padding-left: 55px;
+
   font-weight: 800;
   color: @multimedia-likes-font-color;
-}
 
-.multimedia__list {
-  background-color: gray;
-}
+  &::before {
+    content: "";
 
-.multimedia-item--big {
-  background-color: lightblue;
+    position: absolute;
+    top: 10;
+    left: 20px;
+
+    width: 22px;
+    height: 20px;
+
+    opacity: 0.3;
+
+    background-image: url('../img/icon-like.svg');
+  }
 }
 
 .multimedia__item {
-  outline: 3px dotted orange;
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #e5e5e5;
+  }
+}
+
+.multimedia-item picture {
+  width: 100%;
+}
+
+.multimedia-img {
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
+  .multimedia {
+    padding-bottom: 40px;
+  }
+
   .multimedia__list {
     display: flex;
     flex-direction: column;
@@ -56,10 +92,68 @@
   .multimedia__item--more--multimedia .multimedia__item {
     width: 50%;
   }
+
+  .description-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .multimedia__likes {
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  .multimedia__item {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #f2f2f2;
+  }
 }
 
 @media (min-width: @desktop-width) {
+
   .multimedia__item--more--multimedia .multimedia__item {
-    width: 33%;
+    width: 33.3%;
+  }
+
+  .multimedia__item {
+    position: relative;
+  }
+
+  .photo-container {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    min-height: 80px;
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .multimedia__photo-header {
+    color: #fff;
+  }
+
+  .multimedia__author {
+    color: #fff;
+  }
+
+  .multimedia__likes {
+    color: #fff;
+
+    &::before {
+      background-image: url('../img/icon-like-white.svg');
+      opacity: 1;
+    }
+  }
+
+  .multimedia__item picture {
+    display: flex;
   }
 }

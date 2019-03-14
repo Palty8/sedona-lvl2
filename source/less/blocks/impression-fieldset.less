@@ -6,7 +6,60 @@
   .reset-list();
 }
 
+.impression-fieldset__item {
+  width: 100%;
+  padding-bottom: 50px;
+
+  display: flex;
+}
+
 .impression-fieldset__label {
   .frequent-header();
+  position: relative;
+
+  width: 100%;
+  padding-left: 60px;
+
   text-transform: initial;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: -7px;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: #e6e6e6;
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+}
+
+.impression-fieldset__item input:checked~.impression-fieldset__label::before {
+  background-image: url(../img/icon-map-marker.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .impression-fieldset {
+    width: 49%;
+  }
+
+  .impression-fieldset legend {
+    text-align: left;
+    padding-bottom: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .impression-fieldset legend {
+    padding-left: 60px;
+  }
 }
