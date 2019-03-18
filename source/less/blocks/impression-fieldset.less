@@ -4,11 +4,12 @@
 
 .impression-fieldset__list {
   .reset-list();
+  padding-left: 85px;
 }
 
 .impression-fieldset__item {
   width: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 45px;
 
   display: flex;
 }
@@ -18,7 +19,6 @@
   position: relative;
 
   width: 100%;
-  padding-left: 60px;
 
   text-transform: initial;
 
@@ -29,12 +29,12 @@
     position: absolute;
 
     top: -7px;
-    left: 0;
+    left: -70px;
 
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 
-    background-color: #e6e6e6;
+    background-color: @bg-label-pseudo;
     border-radius: 50%;
 
     cursor: pointer;
@@ -48,12 +48,34 @@
 }
 
 @media (min-width: @tablet-width) {
+
+  .impression-fieldset__list {
+    position: relative;
+
+    padding-left: 110px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      top: -100px;
+      right: -10px;
+
+      width: 1px;
+      height: 292px;
+
+      background-color: @bg-fieldset-list-pseudo;
+    }
+  }
+
   .impression-fieldset {
     width: 49%;
   }
 
   .impression-fieldset legend {
-    text-align: left;
+    font-size: @tablet-legend-font-size;
+
     padding-bottom: 70px;
   }
 }
@@ -61,5 +83,9 @@
 @media (min-width: @desktop-width) {
   .impression-fieldset legend {
     padding-left: 60px;
+  }
+
+  .impression-fieldset__list {
+    padding-left: 175px;
   }
 }

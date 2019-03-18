@@ -1,5 +1,5 @@
 .emotions-fieldset {
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 
   border: none;
 }
@@ -10,7 +10,7 @@
 
   width: 100%;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 
   text-align: center;
 }
@@ -30,6 +30,9 @@
   .emotions-fieldset {
     display: flex;
     flex-direction: column;
+
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .emotions-fieldset label {
@@ -37,6 +40,23 @@
     margin: 0 auto;
     padding-bottom: 50px;
 
-    background-color: #fff;
+    font-size: @tablet-legend-font-size;
+    background-color: @bg-tablet-legend;
+  }
+
+  .emotions-fieldset textarea {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .emotions-fieldset {
+      padding-left: 105px;
+      padding-right: 125px;
+      padding-bottom: 60px;
+    }
+
+    .emotions-fieldset textarea {
+      padding-bottom: 0;
+    }
   }
 }

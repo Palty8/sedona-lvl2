@@ -3,13 +3,15 @@
   flex-direction: column;
   align-items: center;
 
-  padding-top: 30px;
+  padding-top: 15px;
   padding-bottom: 50px;
 }
 
 .search-block__intro {
   .frequent-header();
-  padding-bottom: 25px;
+
+  font-size: 21px;
+  padding-bottom: 20px;
 }
 
 .search-block__text {
@@ -25,21 +27,21 @@
   .button-props();
   width: 100%;
   max-width: 460px;
-  padding: 20px 45px;
+  padding: 15px 45px;
 
   text-align: center;
   border: none;
 
   &:hover {
-    background-color: #669ec0;
+    background-color: @button-hover;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: @button-active;
   }
 
   &:disabled {
-    background-color: #e5e5e5;
+    background-color: @button-disabled;
   }
 }
 
@@ -53,13 +55,14 @@
 
 @media (min-width: @tablet-width) {
   .search-block__intro {
-    font-size: 30px;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
+
+    font-size: @search-intro-font-size;
   }
 
   .search-block__text {
-    width: 440px;
-    padding-bottom: 50px;
+    width: 400px;
+    padding-bottom: 40px;
   }
 
   .search-block {
@@ -75,6 +78,21 @@
 }
 
 @media (min-width: @desktop-width) {
-  background-image: url(../img/bg-map-desktop@1x.jpg);
+  .search-block {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+   .search-block__map {
+    background-image: url(../img/bg-map-desktop@1x.jpg);
+  }
+
+  .search-block__button {
+    padding: 20px;
+  }
+
+  .search-block__text {
+    width: 400px;
+  }
 }
 

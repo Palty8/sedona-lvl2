@@ -1,6 +1,5 @@
 .promo__list {
   .reset-list();
-
   background-color: @bg-promo-list;
 }
 
@@ -22,8 +21,9 @@
 
 .promo__text {
  .reset-indents();
-  width: 260px;
-  padding-bottom: 30px;
+  width: 265px;
+  padding-bottom: 40px;
+  padding-top: 5px;
 
   text-align: center;
 }
@@ -44,7 +44,8 @@
 }
 
 .promo__item--detailed:first-child {
-  padding-top: 55px;
+  padding-top: 75px;
+
   background-image: url(../img/bg-triangle.svg);
   background-position: top;
   background-repeat: no-repeat;
@@ -66,11 +67,16 @@
   width: 100%;
 }
 
-.promo__item--more-items .promo__item{
+.promo__item--brief {
   position: relative;
+  padding-top: 20px;
 }
 
-.promo__item--more-items .promo__item:not(:last-child)::after {
+.promo__item--brief .promo__text{
+  width: 250px;
+}
+
+.promo__item--brief:not(:last-child)::after {
   content: "";
 
   position: absolute;
@@ -84,6 +90,7 @@
   background-color: #282828;
 }
 
+
 @media (min-width: @tablet-width) {
   .promo__item--more-items {
     display: flex;
@@ -91,8 +98,9 @@
 
   .promo__header {
     width: 151px;
+    padding-top: 35px;
+
     font-size: 21px;
-    padding-top: 40px;
   }
 
   .promo__text {
@@ -106,12 +114,14 @@
 
   .promo__item--detailed:first-child {
     padding-top: 0;
+
     background-image: none;
   }
 
   .promo__item--detailed {
     flex-direction: row;
     flex-wrap: wrap;
+
     padding-top: 0;
   }
 
@@ -121,31 +131,46 @@
 
   .promo__item--detailed picture  {
     width: 66.6%;
-
   }
 
-  .promo__item--more-items .promo__item:not(:last-child)::after {
+  .promo__item--brief:not(:last-child)::after {
     display: none;
   }
 
-  .promo__item--more-items .promo__item {
+  .promo__item--brief {
     width: 33.3%;
   }
 
-  .promo__bridge-img {
+  .promo__item--brief .promo__header{
+    padding-top: 20px;
+  }
+
+  .promo__item--brief .promo__number{
+    padding-bottom: 20px;
+  }
+
+  .promo__item--brief .promo__text{
+    width: 160px;
+  }
+
+  .promo__item--bridge picture {
     order: -1;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo__text {
-    width: 270px;
+    width: 220px;
   }
 
-  .promo__item--more-items .promo__item{
+  .promo__item--brief{
     position: relative;
 
-    padding-bottom: 60px;
+    padding-bottom: 25px;
+  }
+
+  .promo__item--brief .promo__text{
+    width: 260px;
   }
 }
 

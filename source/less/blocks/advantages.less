@@ -3,9 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding-top: 35px;
+  padding-left: 25px;
+  padding-bottom: 10px;
 
   background-color: @bg-body;
   color: @advantages-font-color;
@@ -14,7 +16,7 @@
 .advantages__header {
   .reset-indents();
   .frequent-header();
-  padding-bottom: 20px;
+  padding-bottom: 13px;
 }
 
 .advantages__text {
@@ -61,8 +63,9 @@
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    padding-top: 0;
-    padding-bottom: 0;
+
+    padding-top: 15px;
+    padding-left: 0;
   }
 
   .advantages__item {
@@ -71,17 +74,20 @@
     align-items: center;
 
     width: 33.3%;
-    padding-top: 160px;
+    padding-top: 135px;
     padding-bottom: 60px;
   }
 
   .advantages__header {
-    font-size: 21px;
+    padding-top: 15px;
+
+    font-size: @advantages__header-font-size;
   }
 
   .advantages__text {
     width: 165px;
     padding-bottom: 0;
+
     text-align: center;
   }
 
@@ -114,5 +120,11 @@
       height: 68px;
       background-image: url('../img/icon-burger.svg');
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__text {
+    width: 235px;
   }
 }

@@ -21,8 +21,8 @@ line-height: 24px;
   .frequent-header();
   padding-top: 20px;
   padding-bottom: 20px;
-
   width: 100%;
+
   text-align: center;
 }
 
@@ -34,24 +34,25 @@ line-height: 24px;
   .button-props();
   display: block;
 
-  width: 100%;
+  width: 90%;
   max-width: 460px;
-  padding: 20px 45px;
+  padding: 15px 35px;
   margin: 0 auto;
 
   text-align: center;
+  text-transform: uppercase;
   border: none;
 
   &:hover {
-    background-color: #669ec0;
+    background-color: @button-hover;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: @button-active;
   }
 
   &:disabled {
-    background-color: #e5e5e5;
+    background-color: @button-disabled;
   }
 }
 
@@ -74,10 +75,10 @@ line-height: 24px;
   position: absolute;
   top: 0;
 
-  width: 100%;
+  width: 95%;
   height: 1px;
 
-  background-color: #e5e5e5;
+  background-color: @bg-legend-pseudo;
 }
 
 .impression-fieldset {
@@ -105,6 +106,12 @@ line-height: 24px;
     margin: 0;
   }
 
+  form-wrapper fieldset::before,
+  .sight-fieldset::before,
+  .emotions-fieldset::before {
+    width: 648px;
+}
+
   .impression-fieldset::before,
   .name-fieldset::before {
     display: none;
@@ -112,19 +119,24 @@ line-height: 24px;
 
   .form-wrapper .contacts-fieldset::before {
     top: 32px;
+    left: 41px;
     z-index: -2;
+
+    width: 648px;
   }
 
   .sight-fieldset::before {
     top: 44px;
+    left: 41px;
     z-index: -2;
+
+    width: 648px;
   }
 
   .emotions-fieldset::before {
     top: 38px;
     z-index: -2;
   }
-
 
   .form__obligatory-field {
     display: inline;
@@ -136,11 +148,12 @@ line-height: 24px;
     align-items: center;
 
     width: 100%;
-    padding: 0 15px;
+    padding: 0 55px;
   }
 }
 
 @media (min-width: @desktop-width) {
+
   .form-wrapper {
     flex-direction: row;
     flex-wrap: wrap;
@@ -156,10 +169,34 @@ line-height: 24px;
 
   .contacts-fieldset {
     display: flex;
+
     width: 960px;
   }
 
   .feedback-form__button {
     width: 480px;
+  }
+
+  .form-wrapper .contacts-fieldset::before {
+    left: 110px;
+
+    width: 960px;
+  }
+
+  .sight-fieldset::before {
+    left: 105px;
+
+    width: 968px;
+  }
+
+  .emotions-fieldset::before {
+    left: 100px;
+    width: 968px;
+  }
+
+  .form-bottom {
+    padding-left: 110px;
+    padding-right: 130px;
+    padding-bottom: 30px;
   }
 }
