@@ -17,12 +17,24 @@
 
 .emotions-fieldset textarea {
   width: 100%;
+  padding: 20px;
+
   background-color: @bg-input-text;
+
+  border: none;
+  resize: none;
 
   &::placeholder {
     .frequent-header();
-    padding-left: 20px;
-    padding-top: 20px;
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    border: 4px solid #e5e5e5;
+    background-color: #fff;
   }
 }
 

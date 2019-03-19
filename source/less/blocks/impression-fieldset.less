@@ -18,11 +18,17 @@
   .frequent-header();
   position: relative;
 
-  width: 100%;
-
   text-transform: initial;
 
   cursor: pointer;
+
+  &:hover::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active::before {
+    background-color: #d2d2d2;
+  }
 
   &::before {
     content: "";
@@ -34,7 +40,7 @@
     width: 50px;
     height: 50px;
 
-    background-color: @bg-label-pseudo;
+    background-color: #f2f2f2;
     border-radius: 50%;
 
     cursor: pointer;

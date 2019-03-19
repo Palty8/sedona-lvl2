@@ -1,12 +1,14 @@
 .sedona-image-wrapper {
   position: relative;
+
+  width: 100%;
   height: 390px;
   padding: 90px 0;
 
-  background-image: url('../img/bg-intro-triangle-mobile.svg'), url('../img/bg-back-mobile@1x.jpg');
-  background-position: bottom, center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, auto;
+  background-image: url('../img/bg-back-mobile@1x.jpg');
+  background-position:  center;
+  background-repeat: no-repeat;
+  background-size: auto;
 
   &--secondary-page {
     display: flex;
@@ -16,7 +18,24 @@
     height: 160px;
     padding: 0;
 
-    background-position: bottom, bottom;
+    background-position: bottom;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    bottom:-3px;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../img/bg-intro-triangle-mobile.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -40,11 +59,21 @@
     height: 520px;
     padding-top: 80px;
 
-    background-image: url('../img/bg-intro-triangle-tablet.svg'), url('../img/bg-back-tablet@1x.jpg');
+    background-image: url('../img/bg-back-tablet@1x.jpg');
 
     &--secondary-page {
       height: 290px;
       padding-top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+
+      width: 768px;
+      height: 57px;
+
+      background-image: url('../img/bg-intro-triangle-tablet.svg');
+      background-size: auto;
     }
   }
 
@@ -56,6 +85,11 @@
 
 @media (min-width: @desktop-width) {
   .sedona-image-wrapper {
-    background-image: url(../img/bg-intro-triangle-desktop.svg), url(../img/bg-back-desktop@1x.jpg);
+    background-image: url(../img/bg-back-desktop@1x.jpg);
+
+    &::after {
+      width: 1200px;
+      background-image: url(../img/bg-intro-triangle-desktop.svg),;
+    }
   }
 }

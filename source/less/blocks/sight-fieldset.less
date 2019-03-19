@@ -22,6 +22,14 @@
 
   cursor: pointer;
 
+  &:hover::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active::before {
+    background-color: #d2d2d2;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -32,7 +40,7 @@
     width: 50px;
     height: 50px;
 
-    background-color: @bg-label-pseudo;
+    background-color: #f2f2f2;
     cursor: pointer;
   }
 }
