@@ -4,18 +4,83 @@
 
 .name-fieldset__list {
   .reset-list();
+  padding-left: 5px;
+}
+
+.name-fieldset__item {
+  padding-bottom: 18px;
 }
 
 .name-fieldset__label {
+  padding-right: 15px;
+
   font-size: @label-font-size;
   line-height: 26px;
 }
 
+.name-fieldset__label sup {
+  top: -2px;
+}
+
 .name-fieldset__input {
+  width: 66%;
+  height: 58px;
+  padding-left: 20px;
+
+  border: none;
   background-color: @bg-input-text;
 
   &::placeholder {
     .frequent-header();
   }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    border: 4px solid #e5e5e5;
+    background-color: #fff;
+  }
 }
 
+.name-fieldset__item:first-child .name-fieldset__input {
+  width: 77%;
+}
+
+@media (min-width: @tablet-width) {
+  .name-fieldset {
+    width: 49%;
+    padding-left: 45px;
+    padding-bottom: 35px;
+  }
+
+  .name-fieldset legend {
+    padding-bottom: 50px;
+
+    font-size: @tablet-legend-font-size;
+    text-align: initial;
+  }
+
+  .name-fieldset__input {
+    width: 55%;
+  }
+
+  .name-fieldset__item:first-child .name-fieldset__input {
+    width: 68%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .name-fieldset {
+    padding-left: 75px;
+  }
+
+  .name-fieldset__input {
+    width: 312px;
+  }
+
+  .name-fieldset__item:first-child .name-fieldset__input {
+    width: 350px;
+  }
+}

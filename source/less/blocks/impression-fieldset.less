@@ -4,9 +4,94 @@
 
 .impression-fieldset__list {
   .reset-list();
+  padding-left: 85px;
+}
+
+.impression-fieldset__item {
+  width: 100%;
+  padding-bottom: 45px;
+
+  display: flex;
 }
 
 .impression-fieldset__label {
   .frequent-header();
+  position: relative;
+
   text-transform: initial;
+
+  cursor: pointer;
+
+  &:hover::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active::before {
+    background-color: #d2d2d2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: -7px;
+    left: -70px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: #f2f2f2;
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+}
+
+.impression-fieldset__item input:checked~.impression-fieldset__label::before {
+  background-image: url(../img/icon-map-marker.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+
+  .impression-fieldset__list {
+    position: relative;
+
+    padding-left: 110px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      top: -100px;
+      right: -10px;
+
+      width: 1px;
+      height: 292px;
+
+      background-color: @bg-fieldset-list-pseudo;
+    }
+  }
+
+  .impression-fieldset {
+    width: 49%;
+  }
+
+  .impression-fieldset legend {
+    font-size: @tablet-legend-font-size;
+
+    padding-bottom: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .impression-fieldset legend {
+    padding-left: 60px;
+  }
+
+  .impression-fieldset__list {
+    padding-left: 175px;
+  }
 }

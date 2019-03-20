@@ -3,21 +3,132 @@
 }
 
 .site-list__link {
+  display: block;
+
+  padding: 7px 0;
+
   font-size: @site-list-font-size;
   line-height: 40px;
   font-weight: 800;
+  text-align: center;
   color: @site-list-font-color;
+  background-color: @bg-site-list__link;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
 }
 
-@media (min-width: 768px) {
+.site-list__item:last-child .site-list__link {
+  border-bottom:  none;
+}
+
+.site-list__link[href] {
+  &:hover {
+    background-color: @bg-site-list__link-hover;
+  }
+  &:active {
+    color: @site-list__link-color-down;
+  }
+}
+
+@media (max-width: @mobile-only-width) {
+  .site-list__item:last-child .site-list__link {
+    position: relative;
+  }
+
+  .site-list__item:last-child .site-list__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 100%;
+    height: 7px;
+
+    box-shadow: inset 0 -4px 5px -2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (min-width: @tablet-width) {
   .site-list {
     display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+  }
+
+  .site-list__item--main {
+    margin-right: 75px;
+    padding-left: 40px;
+  }
+
+  .site-list__item--multimedia {
+    margin-right: 210px;
+  }
+
+  .site-list__item--form {
+    margin-right: 50px;
   }
 
   .site-list__link {
+    padding: 15px 0;
+
     font-size: @site-list-font-size-tablet;
     line-height: 26px;
     font-weight: 800;
     color: @site-list-font-color-tablet;
+
+    background-color: @bg-site-list__link-tablet;
+    border: none;
+
+  }
+
+  .site-list__link[href] {
+    &:hover {
+      background-color: transparent;
+      color: @site-list__link-hover;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .site-list__link:not([href]) {
+    color :#766357;
+
+      &:hover {
+        color :#766357;
+      }
+
+      &:active {
+        color: rgba(118, 99, 87, 0.3);
+      }
   }
 }
+
+@media (min-width: @desktop-width) {
+  .site-list__link {
+    padding: 18px 0;
+  }
+
+  .site-list {
+    width: 100%;
+  }
+
+  .site-list__item--main {
+    margin-right: 160px;
+    padding-left: 90px
+  }
+
+  .site-list__item--multimedia {
+    margin-right: 380px;
+  }
+
+  .site-list__item--form {
+    margin-right: 135px;
+  }
+}
+

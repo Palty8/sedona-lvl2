@@ -15,6 +15,14 @@
   font-style: normal;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   min-width: 320px;
   .reset-indents();
@@ -57,21 +65,23 @@ img {
   overflow: hidden;
 }
 
-.container {
-  padding: 0 20px;
+.page-container {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
-  .container {
-    width: 672px;
-    margin: 0 auto;
-    padding: 0 48px;
+  .page-container {
+    width: 768px;
+    max-width: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .container {
-    width: 1060px;
-    padding: 0 70px;
+  .page-container {
+    width: 1200px;
+
+    box-shadow: -3px 0 15px 0  rgba(0, 1, 1, 0.2),
+                 3px 0 15px 0  rgba(0, 1, 1, 0.2);
   }
 }

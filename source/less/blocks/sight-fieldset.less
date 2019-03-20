@@ -4,31 +4,100 @@
 
 .sight-fieldset__list {
   .reset-list();
+  padding-left: 80px;
+}
+
+.sight-fieldset__item {
+  width: 100%;
+  padding-bottom: 50px;
+
+  display: flex;
 }
 
 .sight-fieldset__label {
   .frequent-header();
+  position: relative;
+
   text-transform: initial;
+
+  cursor: pointer;
+
+  &:hover::before {
+    background-color: #e5e5e5;
+  }
+
+  &:active::before {
+    background-color: #d2d2d2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: -7px;
+    left: -70px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+}
+
+.sight-fieldset__item input:checked~.sight-fieldset__label::before {
+  background-image: url(../img/icon-tick.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sight-fieldset legend {
+  width: 250px;
 }
 
 @media (min-width: @tablet-width) {
+  .sight-fieldset {
+    padding-bottom: 25px;
+  }
+
   .sight-fieldset__list {
     display: flex;
     flex-wrap: wrap;
-    width: 648px;
+
+    padding-left: 220px;
   }
 
   .sight-fieldset__item {
-    width: 324px;
+    width: 240px;
+  }
+
+  .sight-fieldset__label {
+    width: 200px;
+  }
+
+  .sight-fieldset legend {
+    width: 350px;
+    padding-bottom: 50px;
+
+    font-size: 21px;
+    background-color: @bg-tablet-legend;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .sight-fieldset {
+    padding-bottom: 10px;
+  }
+
   .sight-fieldset__list {
-    width: 960px;
+    justify-content: space-around;
+
+    width: 100%;
+    padding-left: 165px;
   }
 
   .sight-fieldset__item {
-    width: 205px;
+    width: 25%;
+    padding-left: 0;
   }
 }

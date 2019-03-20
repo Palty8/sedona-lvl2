@@ -1,7 +1,30 @@
 .social {
   .reset-list();
+  display: flex;
+  justify-content: space-between;
+
+  width: 155px;
 }
 
 .social__item {
-  background-color: @bg-socials;
+  width: 47px;
+  height: 48px;
+
+  line-height: 48px;
+  text-align: center;
+  background-color: @bg-social;
+
+  &:hover,
+  &:active {
+    background-color: @social-item-hover-active;
+  }
+}
+
+.social__svg {
+  vertical-align: middle;
+  fill: #fff;
+}
+
+.social__item:active .social__svg {
+  fill: rgba(255, 255, 255, 0.3);
 }
