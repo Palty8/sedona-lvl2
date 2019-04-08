@@ -1059,6 +1059,9 @@ input[type="radio"].visually-hidden {
   .multimedia__photo-header {
     color: #fff;
   }
+  .multimedia__likes {
+    color: #fff;
+  }
 }
 .video {
   position: relative;
